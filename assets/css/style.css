@@ -1,0 +1,447 @@
+/* Global Styles */
+:root {
+    --primary: #3498db;
+    --secondary: #2ecc71;
+    --danger: #e74c3c;
+    --warning: #f39c12;
+    --info: #1abc9c;
+    --dark: #34495e;
+    --light: #ecf0f1;
+    --white: #fff;
+    --gray: #95a5a6;
+    --dark-gray: #7f8c8d;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: #2980b9;
+  }
+  
+  /* Layout Styles */
+  .container-fluid {
+    padding: 0;
+  }
+  
+  /* Sidebar/Navbar */
+  .sidebar {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: var(--white);
+    padding: 0;
+    width: 250px;
+    position: fixed;
+    transition: all 0.3s;
+    z-index: 1000;
+  }
+  
+  .sidebar-header {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar-header h3 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-header h3 img {
+    margin-right: 10px;
+    height: 30px;
+  }
+  
+  .sidebar-menu {
+    padding: 20px 0;
+  }
+  
+  .nav-link {
+    color: var(--light);
+    padding: 12px 20px;
+    margin: 5px 0;
+    border-left: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--primary);
+  }
+  
+  .nav-link.active {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--primary);
+  }
+  
+  .nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .page-header h2 {
+    color: var(--dark);
+    font-weight: 600;
+  }
+  
+  /* Cards */
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .card-header {
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-header h5 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--dark);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Tables */
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+  }
+  
+  .table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+  }
+  
+  .table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn i {
+    margin-right: 5px;
+  }
+  
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: var(--gray);
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--dark-gray);
+    color: white;
+  }
+  
+  .btn-success {
+    background-color: var(--secondary);
+    color: white;
+  }
+  
+  .btn-success:hover {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: var(--danger);
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+    color: white;
+  }
+  
+  .btn-warning {
+    background-color: var(--warning);
+    color: white;
+  }
+  
+  .btn-warning:hover {
+    background-color: #d35400;
+    color: white;
+  }
+  
+  .btn-info {
+    background-color: var(--info);
+    color: white;
+  }
+  
+  .btn-info:hover {
+    background-color: #16a085;
+    color: white;
+  }
+  
+  /* Forms */
+  .form-control, .form-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+  }
+  
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--dark);
+  }
+  
+  /* Alerts */
+  .alert {
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  
+  /* Badges */
+  .badge {
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+  
+  .bg-primary {
+    background-color: var(--primary) !important;
+  }
+  
+  .bg-success {
+    background-color: var(--secondary) !important;
+  }
+  
+  .bg-warning {
+    background-color: var(--warning) !important;
+  }
+  
+  .bg-danger {
+    background-color: var(--danger) !important;
+  }
+  
+  .bg-info {
+    background-color: var(--info) !important;
+  }
+  
+  /* Dashboard Stats */
+  .stat-card {
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card .card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .stat-card .card-text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  
+  /* Login Page */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .login-header h4 {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .login-body {
+    padding: 30px;
+    background-color: white;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      margin-left: -250px;
+    }
+    
+    .sidebar.active {
+      margin-left: 0;
+    }
+    
+    .main-content {
+      margin-left: 0;
+    }
+    
+    .main-content.active {
+      margin-left: 250px;
+    }
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
